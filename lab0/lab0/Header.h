@@ -13,5 +13,6 @@ enum ArrayIndices
 
 enum ProgramStatus
 {
-	SUCCESS
+	SUCCESS,
+	OPEN_FILE_FAILED
 };
