@@ -35,15 +35,16 @@ int ParseFile(vector<string> &file_content, char *input_file_name)
 	if (myfile.is_open())
 	{
 		string temp;
-		while (!myfile.eof())
+		do
 		{
 			myfile >> temp;
+			if(myfile.eof()) break; //adapted from http://stackoverflow.com/questions/21647/reading-from-text-file-until-eof-repeats-last-line#21666s
 			file_content.push_back(temp);
-		}
+		} while (!myfile.eof());
 		myfile.close();
 		
-		for (vector<string>::const_iterator i = file_content.begin(); i != file_content.end(); ++i)
-			cout << *i << ' ';
+		//for (vector<string>::const_iterator i = file_content.begin(); i != file_content.end(); ++i)
+			//cout << *i << ' ';
 
 		return SUCCESS;
 	}
