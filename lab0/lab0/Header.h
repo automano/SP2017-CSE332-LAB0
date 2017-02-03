@@ -14,5 +14,6 @@ enum ArrayIndices
 enum ProgramStatus
 {
 	SUCCESS,
-	OPEN_FILE_FAILED
+	OPEN_FILE_FAILED,
+	WRONG_ARGUMENTS_NUMBER
 };

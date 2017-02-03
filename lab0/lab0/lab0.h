@@ -8,3 +8,4 @@
 using namespace std;
 
 int ParseFile(vector<string> &file_content, char *input_file_name);
+int UsageMessage(char * program_name);
