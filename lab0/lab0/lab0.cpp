@@ -29,7 +29,7 @@ int main(int argc, char * argv[])
 				string temp;
 				temp = *i;
 				int is_not_digit = 0;
-				for (int n = 0;n < temp.size();n++)
+				for (int n = 0;n < int(temp.size());n++)
 				{
 					if (!isdigit(temp[n])) // Adapted from http://www.cplusplus.com/reference/cctype/isdigit/
 					{
