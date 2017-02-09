@@ -24,8 +24,9 @@ int main(int argc, char * argv[])
 		if (ParseFile(file_content, file_name) == SUCCESS)
 		{
 			cout <<"Non-digit characters: ";
+			//differentiate numeric values from other input strings
 			for (vector<string>::const_iterator i = file_content.begin(); i != file_content.end(); ++i)
-			{
+			{ 
 				string temp;
 				temp = *i;
 				int is_not_digit = 0;
@@ -54,6 +55,7 @@ int main(int argc, char * argv[])
 			{
 				cout << *i << " ";
 			}
+			cout << endl;
 			return SUCCESS;
 		}
 		else
@@ -69,6 +71,7 @@ int main(int argc, char * argv[])
 
 }
 
+// open a file and read in strings from it
 int ParseFile(vector<string> &file_content, char *input_file_name)
 {// Adapted from http://www.cplusplus.com/doc/tutorial/files/
 	ifstream myfile(input_file_name); // Stream class to read from files
@@ -92,6 +95,7 @@ int ParseFile(vector<string> &file_content, char *input_file_name)
 	}
 }
 
+// print out uasge message
 int UsageMessage(char * program_name)
 {
 	cout << "usage: "<<program_name <<" <input_file_name>" << endl;
